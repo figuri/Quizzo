@@ -60,6 +60,12 @@ function padZero(number) {
 }
 
 function endTest() {
+  quizFinished = true;
+  clearInterval(timerInterval);
+  quizContainer.style.display = "none";
+  saveScoreContainer.style.display = "block";
+  resultsContainer.style.display = "none";
+  
   let correctAnswers = 0;
   let wrongAnswers = 0;
 
@@ -131,3 +137,24 @@ function handleStartButtonClick() {
 }
 
 initializeQuiz();
+
+const saveScoreContainer = document.getElementById("save-score-container");
+const saveScoreButton = document.getElementById("save-score-button");
+const goBackButton = document.getElementById("go-back-button");
+
+saveScoreButton.addEventListener("click", handleSaveScore);
+goBackButton.addEventListener("click", handleGoBack);
+
+function handleSaveScore() {
+  const initialsInput = document.getElementById("initials");
+  const initials = initialsInput.value;
+    saveScore(initials, correctAnswers);
+    resetQuiz();
+  }
+  
+  function handleGoBack() {
+    saveScoreContainer.style.display = "none";
+    resetQuiz();
+  }
+
+  
