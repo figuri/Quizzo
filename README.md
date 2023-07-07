@@ -1,6 +1,7 @@
 # Quizzo
 Quiz webpage for testing your coding skill !
 
+[Visit the deployed site](https://figuri.github.io/Quizzo/)
 
 ## **Technology Used** 
 | Technology Used         | Resource URL           | 
@@ -19,7 +20,7 @@ I had a very tough time sorting through all of the different tasks to make this 
 
 ### Finished Product
 
-![JavaScript snippet !](<Screenshot (13).png>)
+![JavaScript snippet !](<./assets/Screenshot (13).png>)
 
 # *Author Info*
 
